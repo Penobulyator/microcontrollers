@@ -1,30 +1,15 @@
+#define MORSE_PIN_IN 3
+#define MORSE_PIN_OUT 13
+
+#define READY_IN 12
+#define READY_OUT 11
+
 const int DOT_DELAY = 3;
 const int DASH_DELAY = DOT_DELAY * 3;
 const int SPACE_DELAY = DOT_DELAY;
 const int SYMBOL_DELAY = DOT_DELAY * 3;
 
 const int ERROR_DELAY = DOT_DELAY;
-/*
-									  symbol
-		dot       space   dash        delay
-	   delay      delay   delay      -    -
-	   |   |      |   | |        |  /      \
-	   \   /      \   / \        / /        \
-		| |        | |   |      | /          \
-
-		+-+ +------+ +-+ +------+             +-+ +-+ +-+ +-----+
-		| | |      | | | |      |             | | | | | | |     |
-		| | |      | | | |      |             | | | | | | |     |
-   -----+-+-+------+-+-+-+------+-------------+-+-+-+-+-+-+-----+----
-	   --------------------------            --------------------
-		   symbol 1 (.-.-)                      symbol 2 (...-)
-*/
-
-#define MORSE_PIN_IN 3
-#define MORSE_PIN_OUT 13
-
-#define READY_IN 12
-#define READY_OUT 11
 
 typedef struct
 {
